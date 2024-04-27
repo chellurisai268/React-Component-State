@@ -1,0 +1,20 @@
+<!-- Display different images conditionally React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+         var Img=function(){
+            var[s,setS]=React.useState(+prompt(""))
+            return <div>{s%2===0? <img src="https://media.istockphoto.com/id/510682838/photo/the-dance-competition.jpg?s=1024x1024&w=is&k=20&c=22O7YdNTAq8VhgkIuo0n-dB4-iMyij4A3G3F6WxSrvc=" width="200px"/>: <img src="https://media.istockphoto.com/id/157478834/photo/two-dolphins-in-a-blue-water.jpg?s=1024x1024&w=is&k=20&c=E4ELgNJGVpESCFIh7C-ehTggN8AGSDaMn23Vi5t9LCg="width="200px" /> }</div>
+         }
+      
+          ReactDOM.render(<Img/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

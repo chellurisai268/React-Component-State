@@ -1,0 +1,20 @@
+<!-- Display variable value is positive or negative in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+         var Pn=function(){
+            var [x,setx]=React.useState(+prompt(""))
+            return <h1>{x>=0?"Positiv":"Negative"}</h1>
+         }
+      
+          ReactDOM.render(<Pn/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

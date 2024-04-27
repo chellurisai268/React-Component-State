@@ -1,0 +1,30 @@
+
+<!-- Display each string of array in flex boxes in React Component -->
+ 
+
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+           var Xyz=function(){
+            var[b,setB]=React.useState(["sai","anil","ayyappa","suri"])
+            return <div style={{display:"flex"}}>
+                {
+                    b.map((a)=>{
+                        return <div style={{border:"2px solid",padding:"10px",margin:"10px"}}>{a}</div>
+                    })
+                }
+                </div>
+           }
+          
+          ReactDOM.render(<Xyz/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

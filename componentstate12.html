@@ -1,0 +1,20 @@
+<!-- Evaluate addition of two variable values in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+          var Addition=function(){
+            var [x,setx]=React.useState(100)
+            var [y,sety]=React.useState(10)
+            return <h1>{x+y}</h1>
+          } 
+          ReactDOM.render(<Addition />,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

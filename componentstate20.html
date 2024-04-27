@@ -1,0 +1,38 @@
+<!-- Print array strings ol and ul in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Olul=function(){
+                var[w,setw]=React.useState(["dog","cat","pig","mouse","tiger","lion"])
+                return <div>
+                    {
+                        <ol>
+                        {
+                            w.map(function(s){
+                                return <li>{s}</li>
+                            })
+                        }
+                        </ol>
+                    }
+                {
+                    <ul>
+                    {
+                        w.map(function(s){
+                            return <li>{s}</li>
+                        })
+                    }
+                    </ul>
+                }
+                </div>
+            }
+          ReactDOM.render(<Olul/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

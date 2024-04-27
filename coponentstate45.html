@@ -1,0 +1,76 @@
+<!-- Generation of table in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+       
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=function(){
+  
+                var[x,setx]=React.useState([
+                {
+                firstname:"Praveen",
+                lastname:"Gubbala",
+                age:40 ,
+                gender:"male"
+                },
+                {
+                firstname:"Rohit",
+                lastname:"Sharma",
+                age:35 ,
+                gender:"male"
+                },
+                {
+                    firstname:"Sachin",
+                lastname:"Tenduikar",
+                age:50 ,
+                gender:"male"
+                },
+                {
+                    firstname:"Sindu",
+                lastname:"pv",
+                age:40 ,
+                gender:"female"
+                }
+      
+                ])
+               
+                return(
+                <div>
+                    {
+                        <table border="2">
+                                <thead>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Age</th>
+                                    <th>Options</th>
+                                </thead>
+                                <tbody>
+                                    {
+                                        x.map((s,i)=>{
+                                            return  <tr>
+                                                        <td>{s.firstname}</td>
+                                                        <td>{s.lastname}</td>
+                                                        <td>{s.age}</td>
+                                                        <td>
+                                                            <button onClick={()=>{
+                                                                deleteTask(i)
+                                                            }}>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                        })
+                                    }    
+                                </tbody>
+                            </table>
+                    }
+                </div>
+            )
+            }
+          ReactDOM.render(<Abc/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

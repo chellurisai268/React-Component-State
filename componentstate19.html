@@ -1,0 +1,21 @@
+<!-- Conditionally apply url to image in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var a=+prompt()
+         var Img=function(){
+            var[t,setT]=React.useState(a)
+            return <img src={t%2===0? "https://media.istockphoto.com/id/1901106177/photo/the-hibiscus-flower.jpg?s=1024x1024&w=is&k=20&c=_tJeiAKt_NGmnys_sY0BzLmEoevlnVA0S28zR2GS0Ho=":"https://media.istockphoto.com/id/2109093418/photo/bittere-schleifenblume-iberis-amara.jpg?s=1024x1024&w=is&k=20&c=5VzdUodD69aV__ULp4C2j7CUUsoiLAS4SW2qaHsTeYo=" }width="300px" />
+         }
+      
+          ReactDOM.render(<Img/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

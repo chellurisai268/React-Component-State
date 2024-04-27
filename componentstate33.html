@@ -1,0 +1,37 @@
+<!-- Print array strings in list items in React component
+  -->
+<html>
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var Evenodd=function(){
+
+            var[x,setx]=React.useState([
+                "dog",
+                "cat",
+                "pig",
+                "mouse",
+                "tiger",
+                "lion",
+                "eleplant"
+            ])
+            return <div>
+                {
+                    <div>
+                    {
+                        x.map((a)=>{return <li>{a.length%2===0?<i>{a}</i>:<b>{a}</b>}</li> })
+                    }
+                </div>
+                }
+               </div>   
+        }
+      ReactDOM.render(<Evenodd/>,document.getElementById("d1"))
+  </script>
+ 
+  </body>
+  </html>

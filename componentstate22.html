@@ -1,0 +1,29 @@
+<!-- Print array values in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Olul=function(){
+                var[w,setw]=React.useState([7,41,25,8,9,6,3])
+                return <h1>
+                    {
+                        <div>
+                        {
+                            w.map(function(s){
+                                return <ul>{s}</ul>
+                            })
+                        }
+                    </div>
+                    }
+                   </h1>   
+            }
+          ReactDOM.render(<Olul/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

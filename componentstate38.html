@@ -1,0 +1,37 @@
+<!-- Print the images as table cells from array of image urls in
+React component-->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Evenodd=function(){
+  
+                var[x,setx]=React.useState([
+                "https://media.istockphoto.com/id/1312015176/photo/dinosaurs-and-asteroid.jpg?s=1024x1024&w=is&k=20&c=lATC2uJOXUU1f6bORzI7VD2uZ9egmZo0yUwBkT6Vxs8=",
+                "https://media.istockphoto.com/id/503686732/photo/elephant-washing-in-the-river.jpg?s=1024x1024&w=is&k=20&c=K8cjCFjYbmJ4DP5AiJqjtxlLG3N0pJlu6TFqD5Qg_Hk=",
+                "https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+                ])
+               
+                return <div>
+                    {
+                        <div>
+                        {
+                            x.map((a)=>{
+                                return <img src={a} alt="" width="200px"/>
+                            })
+                        }
+                    </div>
+                    }
+                   </div>   
+            }
+          ReactDOM.render(<Evenodd/>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>

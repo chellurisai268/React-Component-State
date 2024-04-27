@@ -1,0 +1,26 @@
+<!-- Display the text of div on click in console in React Component -->
+ 
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Textdiv=function(){
+                var[z,setz]=React.useState("Welcome to Edupoly RreactJS")
+                function abc(){
+                    console.log(z)
+                }
+                return <div style={{border:'2px solid',width:'200px',height:'300px'}} onClick={()=>{abc()}}>
+                    {z}
+                    </div>
+            }
+   
+          ReactDOM.render(<Textdiv/>,document.getElementById("d1"))
+      </script>
+    </body>
+    </html>
